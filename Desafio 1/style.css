@@ -1,0 +1,47 @@
+body {
+  background-image: url(./imagens/fundo.png);
+  margin: 0 auto;
+  padding: 0 22%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body#contato,
+body#quemsomos {
+  padding: 0 10%;
+  background-image: url(./imagens/fundo2.png);
+}
+div#infoBar {
+  margin-top: 0.6%;
+  display: flex;
+  align-items: center;
+  height: 12vh;
+}
+div#options {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5%;
+}
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+img#capa {
+  align-self: center;
+  width: 100%;
+}
+hr {
+  width: 100%;
+}
+h,
+p {
+  text-align: justify;
+}
+footer {
+  align-self: center;
+  font-weight: 600;
+}
