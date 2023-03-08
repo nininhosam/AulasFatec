@@ -1,2 +1,2 @@
-# Aulas da Fatec
-Repositório para aulas de Programação em Microinformática e Algoritmos e Lógica de Programação
+# Programacao Em Microinformática
+Repositório para aula de Programação em Microinformática
