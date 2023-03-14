@@ -1,0 +1,20 @@
+Werkzeug = ~live Server, interface entre App e Server
+Jinja    = ~Template lang, faz a render
+
+
+>Abre o cmd na pasta do projeto
+>"python -m venv venv" ou "py -3 -m venv venv"
+   primeiro venv = token, segundo = nome da pasta
+>venv/Scripts/activate
+>.\venv\Scripts\activate
+>deactivate
+>pip install flask
+
+>>>Case of Error
+>open PowerShell as admin, and copy the group policy <AllSigned>
+
+>flask --version should work on flask, not on machine
+
+
+ls  no cmd "listar"
+NOTA: o venv entra no gitignore
