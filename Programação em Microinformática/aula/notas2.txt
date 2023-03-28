@@ -1,0 +1,16 @@
+normalize.css -> criar uma norma entre os browsers
+
+base.html (dentro do body):
+{% block nomequalquer %}
+{% endblock %}
+
+
+Pagina1.html (dentro do body):
+{% extends "base.html" %}
+
+  {% block nomequalquer %}
+  <div>
+    <h1></h1>
+    <p></p>
+  </div>
+  {% endblock}
