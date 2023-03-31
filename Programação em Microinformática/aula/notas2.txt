@@ -14,3 +14,7 @@ Pagina1.html (dentro do body):
     <p></p>
   </div>
   {% endblock}
+
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
