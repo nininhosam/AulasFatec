@@ -1,20 +1,33 @@
-normalize.css -> criar uma norma entre os browsers
+normalize.css -> criar uma norma entre os browsers (lembrete: sempre antes do style.css)
 
-base.html (dentro do body):
-{% block nomequalquer %}
-{% endblock %}
+base.html (equivalente a um ${} ou um f"{}"):
+ ________________________
+|{% block nomequalquer %}|
+|{% endblock %}          |
+ ------------------------
+ _________________________________________
+|Pagina1.html (dentro do body):           |
+|{% extends "base.html" %}                | extends the template file
+|                                         |
+|  {% block nomequalquer %}               | create a block
+|  <div>                                  |
+|    <h1></h1>                            |
+|    <p></p>                              |
+|  </div>                                 |
+|  {% endblock}                           | end the block
+ -----------------------------------------
+
+ -----------------------------------------
+|from flask import Flask, render_template |
+|app = Flask(__name__)                    |
+|@app.route("/")                          | defines route such as default:("/") or like ("/contact"). ("/account")
+|def home():                              | define function
+|  return render_template("home.html")    | define where to
+ -----------------------------------------
 
 
-Pagina1.html (dentro do body):
-{% extends "base.html" %}
-
-  {% block nomequalquer %}
-  <div>
-    <h1></h1>
-    <p></p>
-  </div>
-  {% endblock}
-
-from flask import Flask
-app = Flask(__name__)
-@app.route("/")
+export and import requirements:
+ _______________________________
+|pip freeze > requirements.txt  |
+|pip install -r requirements.txt|
+ -------------------------------
