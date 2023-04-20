@@ -1,6 +1,5 @@
 body {
   background-image: url(./imagens/fundo.png);
-  margin: 0 auto;
   padding: 0 22%;
   height: 100%;
   display: flex;
@@ -33,6 +32,7 @@ main {
   align-items: flex-start;
 }
 img#capa {
+  margin-top: 7px;
   align-self: center;
   width: 83.5%;
 }
