@@ -10,7 +10,11 @@
 
 # D. Dada uma lista de números retorna uma lista sem os elementos repetidos
 def remove_iguais(nums):
-  return
+  new_nums = []
+  for i in nums:
+      if i not in new_nums: new_nums.append(i)
+  new_nums.sort()
+  return new_nums
 
 # E. Cripto desafio!!
 # Dada uma frase, você deve retirar todas as letras repetidas das palavras
@@ -20,7 +24,14 @@ def remove_iguais(nums):
 # depois tente ordenar as letras e montar uma string com o resultado.
 # Utilize listas auxiliares se facilitar
 def cripto(frase):
-  return 
+  fixed_phrase = ''
+  word_list = frase.split(' ')
+  for word in word_list:
+    spelling = list(word)
+    spelling.sort()
+    fixed_word = ''.join(remove_iguais(spelling))
+    fixed_phrase += '{0} '.format(fixed_word)
+  return fixed_phrase[:-1]
 
 # F. Derivada de um polinômio
 # Os coeficientes de um polinômio estão numa lista na ordem do seu grau.
