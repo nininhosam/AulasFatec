@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+
+    {% block title %} Home {% endblock %}
+    {% block id %}contato{% endblock %}
+    {% block content %}
+    <main>
+
+      <h1>Entre em contato</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+      <hr>
+
+      <form action="/contato" method="post">
+        <p class="p-contato">Seu e-mail:</p>
+        <input type="text" name="email" id="email">
+        <p class="p-contato">Assunto:</p>
+        <input type="text" name="assunto" id="assunto">
+        <p class="p-contato">Descrição:</p>
+        <textarea id="descricao" name="descricao" cols="20" rows="2"></textarea>
+        <input class="send-button" id="enviar" type="submit" value="Enviar">
+      </form>
+
+    </main>
+    {% endblock %}
