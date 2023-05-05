@@ -1,14 +1,13 @@
 body {
-  background-image: url(./imagens/fundo.png);
+  background-image: url(./imagens/fundo2.png);
   padding: 0 22%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body#contato,
-body#quemsomos {
-  background-image: url(./imagens/fundo2.png);
+body#home {
+  background-image: url(./imagens/fundo.png);
 }
 div#infoBar {
   margin-top: 0.6%;
@@ -56,4 +55,15 @@ footer {
 }
 .send-button{
   display: block;
+}
+.user-table-column-1{
+  padding: 1.5vh;
+  width: 10%;
+}
+.user-table-column-3{
+  width: 60%;
+} 
+.user-table{
+  width: 100%;
+  text-align: left;
 }
