@@ -17,6 +17,8 @@
 | Defining functions                               | def function(): #code                            | function (function) { #code } /                  |
 | Defining functions                               |                                                  | let function = (args)=>{ #code }                 |
 | Referencing current instance                     | self                                             | this                                             |
+| Importing libraries and modules                  | from module import fun1                          | import { fun1 as func } from module              |
+| Importing libraries and modules                  | import module as lib                             | import func from module                          |
 |--------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
 |__________________________________________________| String methods:  ________________________________| String methods:  ________________________________|
 | Length of string                                 | len('Alvo') = 4                                  | 'Alvo'.length = 4                                |
