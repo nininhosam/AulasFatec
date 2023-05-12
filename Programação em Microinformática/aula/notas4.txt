@@ -1,0 +1,25 @@
+ssh usuario@ipdoservidor
+ssh -i chave usuario@ipdoservidor
+
+sudo apt update
+sudo apt install python3-pip -y
+
+
+touch app.py
+vim app.py
+nano app.py
+
+flask run --host=0.0.0.0
+
+>bitvise
+
+
+
+
+
+
+
+
+nano:
+salvar / sair
+ctrl+o ctrl+x

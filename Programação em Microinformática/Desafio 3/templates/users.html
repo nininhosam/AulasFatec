@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+{% block title %} Usuários {% endblock %}
+{% block id %}users{% endblock %}
+{% block content %}
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th class="user-table-column-1">Email</th>
+        <th class="user-table-column-2">Assunto</th>
+        <th class="user-table-column-3">Descrição</th>
+      </tr>
+    </thead class="user-table-head">
+
+    {% for user in userData %}
+    <tbody>
+      <tr>
+        <th>{{user[1]}}</th>
+        <th>{{user[2]}}</th>
+        <th>{{user[3]}}</th>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+{% endblock %}
