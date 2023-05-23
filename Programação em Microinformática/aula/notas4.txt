@@ -23,3 +23,9 @@ flask run --host=0.0.0.0
 nano:
 salvar / sair
 ctrl+o ctrl+x
+
+
+////
+sudo su
+mysql -u root -p 
+/var/lib/mysql
