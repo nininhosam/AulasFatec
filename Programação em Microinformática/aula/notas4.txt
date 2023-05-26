@@ -29,3 +29,69 @@ ctrl+o ctrl+x
 sudo su
 mysql -u root -p 
 /var/lib/mysql
+
+
+-------------------------------------------------------
+26/05/2023
+//some shits
+>pwd (show directory)
+>ls (list directory)
+>sshd_config (where the settings for it are set)
+
+
+// fazendo backup
+>cd /etc/ssh
+>sudo su
+>cat sshd_config > sshd_config.original (prints inside file)
+>diff sshd_config sshd_config.original (lists differences between each)
+
+// allowing for passwords
+>vim sshd_config.original 
+>uncomment "PubkeyAuthentication yes"
+>uncomment "AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2"
+>edit "PasswordAuthentication no" to "PasswordAuthentication yes"
+>diff sshd_config sshd_config.original (should now show only those changes)
+
+//setting password
+>exit (go back to ubuntu user)
+>sudo passwd ubuntu
+>insert your password)
+>sudo systemctl restart ssh (restart server)
+>sudo systemctl status ssh (show status, like uptime)
+
+powershell:
+>ssh ubuntu@ipdoservidor
+>yes
+>(put your password)
+>sudo /etc/init.d/mysql status 
+>netstat -ant (show ports)
+
+//creating new mysql user
+>mysql -u root -p (connect to mysql)
+>CREATE USER 'usuario'@'%' IDENTIFIED BY 'senha'; (create new user//'usuario' and 'senha' are variables. not the actual words 'usuario' and 'senha')
+>GRANT ALL PRIVILEGES ON * . * TO 'usuario'@'%'; (all privileges = same as root; first * is database; secont * is table)
+>FLUSH PRIVILEGES; (load perms)
+
+//logging in as that user
+>exit
+>mysql -u usuario -psenha 
+
+//logging remotely
+on mysql workbench:
+-new connection
+-hostname: ip publico 
+-username: usuario
+-test connection: should be unable to connect to localhost.
+
+//letting non-localhost log in to database
+back on linux:
+>cd /etc/mysql
+>cd mysql.conf.d
+>ls (mysql.cnf = client file.; mysqld.cnf = server file.)
+>vim mysqld.cnf
+>edit 'bind-adress = 127.0.0.1' to 'bind-adress = 0.0.0.0'
+>edit 'mysqlx-bind-adress = 127.0.0.1' to 'mysqlx-bind-adress = 0.0.0.0'
+>mysql restart
+
+// workbench connection should now work.
+** on app.py, you should change 'user' and 'password' so it can connect to database.
