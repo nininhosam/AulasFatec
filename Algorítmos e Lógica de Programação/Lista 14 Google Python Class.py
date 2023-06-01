@@ -39,7 +39,7 @@ def cripto(frase):
 # Exemplo: [3, 2, 5, 2] retorna [2, 10, 6]
 # A derivada de 3 + 2x + 5x^2 + 2x^3 é 2 + 10x + 6x^2
 def derivada(coef):
-  return
+  return [num*grau for num, grau in enumerate (coef)][1:]
 
 # G. Soma em listas invertidas
 # Colocamos os dígitos de dois números em listas ao contrário
@@ -48,7 +48,18 @@ def derivada(coef):
 # pode supor que n1 e n2 tem o mesmo número de dígitos
 # Não vale converter a lista em número para somar diretamente
 def soma(n1, n2):
-  return
+  resArr = []
+  carry = 0
+  for pos in range(len(n1)):
+    digit = n1[pos]+n2[pos]+carry
+    resArr.append(int(str(digit)[-1]))
+    if len(str(digit)) > 1:
+      carry = int(str(digit)[0])
+    else:
+      carry = 0
+  if carry != 0:
+    resArr.append(carry)
+  return  resArr
 
 # H. Anagrama
 # Verifique se duas palavras são anagramas,
@@ -57,7 +68,7 @@ def soma(n1, n2):
 # anagrama('amor', 'ramo') = True
 # anagrama('aba', 'baba') = False
 def anagrama(s1, s2):
-  return 
+  return sorted(s1) == sorted(s2)
 
 def test(obtido, esperado):
   if obtido == esperado:
