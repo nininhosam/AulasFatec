@@ -1,0 +1,33 @@
+Java - Object oriented
+| Todas as instruções >>> método >>> classe >>> arquivo com mesmo nome da classe
+| Primeiro método obrigatoriamente é o *main*.
+| System é uma API
+| System.out.println()   ========
+| ------------------------------------------------------------------------------
+| Primitive types:
+| [boolean, byte, short, char, int, float, long, double]
+| ------------------------------------------------------------------------------
+| Syntaxe de variável:
+| int idade = 20
+| boolean verdade = true
+| char letra = 'a'
+| ------------------------------------------------------------------------------
+| double d3 = 3.14;
+| int i = (int) d3;  //Pega só a parte inteira de d3
+| ------------------------------------------------------------------------------
+| Declarar variavel errado não compila (ex: int i = 3.14;)
+| ------------------------------------------------------------------------------
+| normas/convenções de variável - camelCase
+| comentários: // e /* */
+| ------------------------------------------------------------------------------
+| Operações basicas: [+, -, *, /, %]
+|     *não tem potência nem raiz
+| Operadores de atribuição: [+, +=, -=, *=, /=, %=]
+| Operadores de incremento: [++, --]                (can be pre or post)
+| Operadores de comparação: [==, !=, >, >=, <, <=]
+| Operadores lógicos: [&, &&, |, ||, ^, !]          (&& and || can be short circuited, & and | cannot.) (^ is XOR)
+| ------------------------------------------------------------------------------
+| If, else: se tiver apenas uma declaração, pode pular as {}
+| Switch case: EXISTE!!!!
+| exercises: 1C 2B 3E 4C 5C?D?
+| ------------------------------------------------------------------------------
