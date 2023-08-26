@@ -31,3 +31,18 @@ Java - Object oriented
 | Switch case: EXISTE!!!!
 | exercises: 1C 2B 3E 4C 5C?D?
 | ------------------------------------------------------------------------------
+
+
+
+Other notes:
+
+  static void myMethod() {
+    System.out.println('4');
+  }
+
+Doesn't return ↑
+Returns ↓
+
+  static int myMethod(){
+    return 4;
+  }
